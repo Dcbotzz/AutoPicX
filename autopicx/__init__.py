@@ -7,7 +7,7 @@ from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.INFO)
 
-API_ID = int(environ.get("API_ID"))
+API_ID = environ.get("API_ID")
 API_HASH = environ.get("API_HASH")
 SESSION = environ.get("SESSION")
 TIME = int(environ.get("TIME", "60"))
@@ -21,7 +21,7 @@ else:
 
 try:
     client = TelegramClient(
-        session=session,
+        session=SESSION,
         api_id=API_ID,
         api_hash=API_HASH,
         connection=ConnectionTcpAbridged
