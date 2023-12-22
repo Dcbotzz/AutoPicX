@@ -1,1 +1,1 @@
-worker: python3 -m autopicx
+web: python3 -m autopicx
